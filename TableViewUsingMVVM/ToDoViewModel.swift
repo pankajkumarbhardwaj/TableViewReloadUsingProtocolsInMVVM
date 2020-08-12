@@ -36,7 +36,7 @@ extension ToDoItemViewModel:TodoItemVieDelegate {
 
 
 
-protocol TodoItemViewDelegate {
+protocol TodoViewDelegate {
     func onTodoItemAdded() -> ()
 }
 
@@ -56,7 +56,7 @@ class ToDoViewModel {
     }
 }
 
-extension ToDoViewModel:TodoItemViewDelegate {
+extension ToDoViewModel:TodoViewDelegate {
     func onTodoItemAdded() {
         guard let newValue = self.newTodoItem else {
             return
